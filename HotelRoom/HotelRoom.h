@@ -32,21 +32,30 @@ public:
 		return rate;
 	}
 	// set functions
-	int setNumber(int number) {
+	void setNumber(int number) {
 		if (number < 0) {
 			throw invalid_argument("Negative Parameter!");
 		}
 		this->number = number;
 	}
-	double setRate(double rate) {
+	void  setRate(double rate) {
 		if (rate < 0) {
 			throw invalid_argument("Negative Parameter!");
 		}
 		this->rate = rate;
 	}
+	// virtual keyword allows for polymorphism in the method. Allows other subclasses to inherit from the super class
+	virtual double calculateBill() {
+		// return number of days stayed x rate
+		return 0.0;
 
-	string toString() {
-		return ("Room Number: " + to_string(number) + " Rate: " + to_string(rate));
+	}
+	virtual string toString() {
+		return ("Room Number: " + to_string(number) + " Rate: $" + to_string(rate));
+	}
+	void displayHotelRoom(HotelRoom& room) {
+		cout << "$" << room.calculateBill() << endl;
+		cout << room.toString() << endl;
 	}
 };
 

@@ -56,7 +56,7 @@ public:
 
 	}
 	string toString() {
-		return ("GuestRoom Number: " + to_string(getNumber()) + " Rate: $" + to_string(getRate()) + "\n" +
+		return ("Guest Room Number: " + to_string(getNumber()) + " Rate: $" + to_string(getRate()) + "\n" +
 			to_string(status) + " of max " + to_string(capacity) + " occupants staying " + to_string(days) + " day(s)");
 
 	}

@@ -34,7 +34,7 @@ public:
 		this->status = status;
 	}
 	string toString() {
-		return toString() + "Number of Seats: " + to_string(seats) + " Status: " + to_string(status);
+		return ("Meeting Room Number: " + to_string(getNumber()) + " Rate: $" + to_string(getRate()) + "\nNumber of Seats: " + to_string(seats) + " Status: " + to_string(status));
 	}
 	double calculateBill()
 	{
