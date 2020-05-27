@@ -33,6 +33,15 @@ public:
 	void setStatus(int status) {
 		this->status = status;
 	}
+	string toString() {
+		return toString() + "Number of Seats: " + to_string(seats) + " Status: " + to_string(status);
+	}
+	double calculateBill()
+	{
+		// # of seats multiplied by 10 plus 500
+		// cast seats an integer to a double to return a double
+		return (double)seats * 10.00 + 500.00;
+	}
 };
 #endif 
 
